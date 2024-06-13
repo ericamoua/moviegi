@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie APP</title>
+</head>
+<header class="header">MOVIE APP</header>
+<body>
+    <div class="search-container">
+        <label for="searchInput">Search Movies:</label>
+        <input type="text" id="searchInput" placeholder="Search for a movie...">
+    </div>
+    <h1>Select a Movie</h1>
+    <form>
+        <label for="movies">Choose a movie:</label>
+        <select id="movies" name="movies">
+            <option value="inception">Inception</option>
+            <option value="the-dark-knight">The Dark Knight</option>
+            <option value="interstellar">Interstellar</option>
+            <option value="parasite">Parasite</option>
+            <option value="avengers-endgame">Avengers: Endgame</option>
+            <option value="joker">Joker</option>
+        </select>
+        
+        <input type="submit" value="Submit" onclick="submitForm()">
+    </form>
+    <script src="movie.js"></script>
+</body>
+</html>
