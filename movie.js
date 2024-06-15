@@ -95,21 +95,8 @@ function searchMovie(movieName) {
 }
 
 // Function to get similar movies by movie ID
-function getSimilarMovies(movieId) {
-  // Construct the URL for the similar movies request
-  const url = `https://api.themoviedb.org/3/movie/${movieId}/similar?language=en-US&page=1`;
 
-  // Perform the GET request using axios
-  axios.get(url, options)
-    .then(response => {
-      console.log("Similar Movies:", response.data.results);
-    })
-    .catch(error => {
-      console.error("Error:", error);
-    });
-}
-
-module.exports = searchMovie;
+export default searchMovie;
 
 // Optionally, you can call the functions directly for testing
 // searchMovie('demon slayer');

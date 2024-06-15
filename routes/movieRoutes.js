@@ -14,10 +14,10 @@ const options = {
 
 // Route to search for movies
 router.get('/', (req, res) => {
-    const query = req.query.query || 'shrek'; // Default movie query if not provided in query parameter
+    const query = req.query.query || 'shrek'; 
 
     // Construct the URL for the search request
-    const url = `https://api.themoviedb.org/3/search/movie?query=${encodeURIComponent(query)}&include_adult=false&language=en-US&page=1`;
+    const url = `https://api.themoviedb.org/3/search/movie?query=${(query)}&include_adult=false&language=en-US&page=1`;
 
     // Perform the GET request using Axios
     axios.get(url, options)
