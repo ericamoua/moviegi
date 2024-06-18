@@ -1,5 +1,6 @@
 // Function to display search results
 document.addEventListener('DOMContentLoaded', function() {
+    //Allow autitication for axios
     const options = {
         headers: {
             accept: 'application/json',
@@ -8,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     // Function to search for a movie
+    //1st time we go to the endpoint
     function searchMovie() {
         const query = document.getElementById('searchInput').value.trim();
 
@@ -16,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
+        //go to this endpoint
         axios.get(`http://localhost:3000/movies?query=${encodeURIComponent(query)}`)
             .then(response => {
                 displayResults(response.data);
