@@ -1,5 +1,5 @@
 const express = require('express');
-const movieRoutes = require('./routes/movieRoutes'); 
+const movinode eRoutes = require('./routes/movieRoutes'); 
 const path = require('path');
 const cors = require('cors');
 
